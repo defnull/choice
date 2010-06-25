@@ -20,7 +20,7 @@ does not need a label. It is labeled 'start' automatically. Example::
 
 Scenes alone don't make a good story. You need a way to proceed from scene to
 scene, best by giving the player a choice. This is why labels are so
-important. You can link to them.
+important. You can link to them::
 
   You open the door and see nothing but black darkness.
   You have a strange feeling about this.
