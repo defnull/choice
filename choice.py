@@ -17,10 +17,10 @@ def getind(line):
     ind = ind.count('\t')*4 + ind.count(' ')
     return ind, sline
 
-def lexer(lines):
+def lexer(source):
     ind = 0
     out = []
-    for line in lines:
+    for line in source.splitlines(True):
         if not line.strip():
             if out and out[-1][0] == 'text':
                 out.append(['text', ind, ''])
@@ -122,6 +122,9 @@ def parser(tokens):
             scene.add_choice(nscene, data[0])
     return start
 
+def parse(source):
+    return parser(lexer(source))
+
 def play(scene):
     ''' Play a game in the text console '''
     while 1:
@@ -138,4 +141,4 @@ def play(scene):
         choice = int(raw_input('? ') or 1)-1
         scene = scene.choices[choice][0]
 
-play(parser(lexer(open(sys.argv[1]))))
+play(parse(open(sys.argv[1]).read() if len(sys.argv) > 1 else 'No plotfile specified.'))
