@@ -1,0 +1,126 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  background-color: #fff;
+  background: #eee;
+  padding: 20px 20px 20px 20px;
+}
+
+body {
+  border: 1px solid #bbb;
+  background-color: #fff;
+  padding: 25px 20px 20px 20px; 
+  font-size: 14px;
+  font-family: sans-serif;
+  line-height: 1.5em;
+  width: 600px;
+  margin: 0 auto;
+  color:#000;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 1em 0em 0.5em 0em;
+  padding: 2px 0px;
+}
+
+h1 {
+    text-align: center;
+    margin: 0em 0em 0.5em 0em;
+}
+
+h2 {
+    margin: 2em 0em 0.5em 0em;
+}
+
+p {
+  margin-bottom: 1em;
+  text-align: justify;
+}
+
+ul, ol {
+  margin: 0 0 1em 1.5em;
+}
+
+a {
+  color: #056;
+}
+
+a:hover {
+  color: #000;
+}
+
+img {
+  border: 0;
+}
+
+form div {
+  clear:left;
+}
+
+form div label {
+  display:block;
+  float:left;
+  width:150px;
+}
+
+input, textarea {
+  border:1px solid #bbb;
+  background-color:#eee;
+  padding:1px;
+  margin:1px;
+  vertical-align:middle;
+}
+
+input:hover, textarea:hover {
+  background-color:white;
+}
+
+input:focus, textarea:focus {
+  border:1px solid #055;
+  background-color:white;
+}
+
+ul.error {
+  color:red;
+}
+
+.small {
+  font-size:75%;
+}
+
+#scene {
+}
+
+div.plot {
+    border: 1px solid #ccc;
+    background-color: #eee;
+    padding: 1em 1em 0 1em;
+    margin-bottom: 1em;
+}
+
+ol.choices {
+}
+
+ol.choices li {
+}
+
+ol.choices li a {
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 3px;
+}
+
+ol.choices li a:hover {
+    background-color: #eee;
+}
+
+
+#footer {
+  text-align: center;
+  padding-top: 1em;
+}
