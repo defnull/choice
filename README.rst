@@ -49,22 +49,25 @@ if you want to jump to it from another scene, too. Here is an example::
   ? Close your eyes and enter the room.
     You are dead now. No one will ever know why.
   ? Light a torch.
-    The room has no floor, but a deep pit wth spears in it.
+    The room has no floor, but a deep pit with spears in it.
     Thank god you didn't step inside.
-    ? Go away.
-      [flee] This was a small dungon and a borng adventure.
+    ? Adventures are dangerous? I don't want to do this anymore.
+      [end] This was a small dungon and a borng adventure.
     ? Search for another door.
       There is one, hidden behind a book shelve.
       <dungeon> Step inside.
-      ? Go away
-        <flee>
+      ? Go away.
+        <end>
+
+  [dungen] The adventure begins...
 
 As you can see, in-place choices can be nested and mixed with normal links.
 The syntax is quite intuitive. Just make sure you get the indention right.
 
-Lets now have a look at the last two lines of the last example. There is an
-in-place choice with no description text and only a single link. It makes no
-sense to present this to the player, so it is stepped over by the game engine.
+Lets now have a look at the "Go away" choice in the last example. It is
+followed by an in-place scene with no description text and only a single link.
+It makes no sense to present an empty scene to the player, so it is stepped
+over by the game engine. The "Go away" choice jumps right to the 'end' scene.
 The following two examples are equivalent (to the player)::
 
   Are you male or female?
@@ -75,7 +78,8 @@ The following two examples are equivalent (to the player)::
 
   Are you male or female?
   <male> I was male last time I checked.
-  <male> Female, thats for sure.
+  <female> Female, thats for sure.
+
 
 Usage
 -----
