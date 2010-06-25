@@ -88,8 +88,10 @@ The library is in a very early state. You can parse a plot-file into a
 scene-graph and play the game in the command line with the following syntax::
 
   from choice import parse, play
-  game = parse(open(sys.argv[1]))
-  play(game)
+  with open(sys.argv[1]) as fp:
+      source = fp.read()
+      game = parse(source)
+      play(game)
 
 Licence (MIT)
 -------------

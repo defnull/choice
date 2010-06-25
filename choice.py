@@ -131,9 +131,9 @@ def play(scene):
         if not scene.text and len(scene.choices) == 1:
             scene = scene.choices[0][0]
             continue
-        print '\n'*20
         print '-'*78
-        print '\n'.join(textwrap.wrap(scene.text.rstrip(), 78))
+        textlines = textwrap.wrap(scene.text.rstrip(), 78)
+        print '\033[1m%s\033[0m' % '\n'.join(textlines)
         print
         if not scene.choices: break
         for i, choice in enumerate(scene.choices):
@@ -141,4 +141,8 @@ def play(scene):
         choice = int(raw_input('? ') or 1)-1
         scene = scene.choices[choice][0]
 
-play(parse(open(sys.argv[1]).read() if len(sys.argv) > 1 else 'No plotfile specified.'))
+if __name__ == '__main__':
+    if len(sys.argv) > 1: source = open(sys.argv[1]).read()
+    else: source = 'No plotfile specified.'
+    game = parse(source)
+    play(game)
